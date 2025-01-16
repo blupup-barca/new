@@ -1,26 +1,16 @@
-class Product:
-    name: str
-    description: str
-    price: float
-    quantity: int
-
-    def __init__(self, name, description, price, quantity):
-        self.name = name
-        self.description = description
-        self.price = price
-        self.quantity = quantity
-
-
 class Category:
-    name: str
-    description: str
-    products: list
-    category_count = 0
-    product_count = 0
+    """Класс для категорий товаров"""
+
+    name = str
+    description = str
+    products = list
+    count_category = 0
+    count_of_goods = 0
 
     def __init__(self, name, description, products):
+        """Метод для инициализации экземпляра класса Category. Задаем значения атрибутам экземпляра."""
         self.name = name
         self.description = description
         self.products = products
-        self.product_count += len(products)
-        Category.category_count += 1
+        Category.count_category += 1
+        Category.count_of_goods += len(products)
