@@ -8,7 +8,8 @@ class Category:
     count_of_goods = 0
 
     def __init__(self, name, description, products):
-        """Метод для инициализации экземпляра класса Category. Задаем значения атрибутам экземпляра."""
+        """Метод для инициализации экземпляра класса Category.
+        Задаем значения атрибутам экземпляра."""
         self.name = name
         self.description = description
         self.products = products
