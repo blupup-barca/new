@@ -5,19 +5,22 @@ from src.product import Product
 
 
 @pytest.fixture
-def first_category():
-    return Category("test", "testing category", [
-        Product("something", "useful tool for testing", 125.50, 666),
-        Product("anything", "everything you desire", 9999999.99, 1)])
+def first_product():
+    return Product("Сыр", "Сыр с плесенью", 100.50, 3)
 
 
 @pytest.fixture
-def second_category():
-    return Category("examination", "category for examination", [
-        Product("everything", "everything everywhere and at once", 69.77, 13),
-        Product("nothing", "respectfully accepting donations", 100, 34435353)])
+def for_category():
+    return Category(
+        name="Молочные продукты",
+        description="Сыр с плесенью",
+        products=[
+            Product("Сыр 1", "Сыр с плесенью", 150.50, 5),
+            Product("Сыр 2", "Сыр Российский", 100.99, 10),
+        ],
+    )
 
 
 @pytest.fixture
-def product():
-    return Product("something", "useful tool for testing", 125.50, 666)
+def for_category_empty_product():
+    return Category(name="Молочные продукты", description="Сыр с плесенью")
