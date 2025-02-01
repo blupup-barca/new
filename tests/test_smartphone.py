@@ -10,8 +10,3 @@ def test_smartphone_init(first_smartphone):
     assert first_smartphone.model == "S23"
     assert first_smartphone.memory == 256
     assert first_smartphone.color == "Серый"
-
-
-
-
-

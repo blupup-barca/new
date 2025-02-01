@@ -9,9 +9,3 @@ def test_lawn_grass_init(first_lawn_grass):
     assert first_lawn_grass.country == "Россия"
     assert first_lawn_grass.germination_period == "7 дней"
     assert first_lawn_grass.color == "Зеленый"
-
-
-
-
-
-
