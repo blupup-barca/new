@@ -22,10 +22,7 @@ def for_category():
     return Category(
         name="Молочные продукты",
         description="Сыр с плесенью",
-        products=[
-            Product("Сыр 1", "Сыр с плесенью", 150.50, 5),
-            Product("Сыр 2", "Сыр Российский", 100.99, 10),
-        ],
+        products=[Product("Сыр 1", "Сыр с плесенью", 150.50, 5), Product("Сыр 2", "Сыр Российский", 100.99, 10)],
     )
 
 
@@ -51,13 +48,15 @@ def second_smartphone():
 
 @pytest.fixture
 def first_lawn_grass():
-    return LawnGrass(
-        "Газонная трава", "Элитная", 500.0, 20, "Россия", "7 дней", "Зеленый"
-    )
+    return LawnGrass("Газонная трава", "Элитная", 500.0, 20, "Россия", "7 дней", "Зеленый")
 
 
 @pytest.fixture
 def second_lawn_grass():
-    return LawnGrass(
-        "Газонная трава 2", "Выносливая", 450.0, 15, "США", "5 дней", "Темно-зеленый"
-    )
+    return LawnGrass("Газонная трава 2", "Выносливая", 450.0, 15, "США", "5 дней", "Темно-зеленый")
+
+
+@pytest.fixture
+def category_empty_product():
+    return Category(name="Молочные продукты", description="Сыр с плесенью")
+

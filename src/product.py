@@ -53,4 +53,3 @@ class Product(BaseProduct, ReprMixin):
         if type(other) is self.__class__:
             return self.__price * self.quantity + other.price * other.quantity
         raise TypeError
-
